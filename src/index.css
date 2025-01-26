@@ -1,0 +1,8 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  opacity: 0.9;
+  background-image: radial-gradient(#3a0007 0.7500000000000001px, #000000 0.7500000000000001px);
+  background-size: 17px 17px;
+}

@@ -1,0 +1,170 @@
+/* Import statements */
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Futura:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Avenir:wght@400;700&display=swap');
+
+/* Helvetica Neue */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Garamond */
+h1, h2, h3 {
+    font-family: 'Garamond', serif;
+}
+
+/* Futura */
+p {
+    font-family: 'Futura', 'Trebuchet MS', Arial, sans-serif;
+}
+
+/* Bodoni */
+blockquote {
+    font-family: 'Bodoni Moda', 'Didot', serif;
+}
+
+/* Avenir */
+nav, footer {
+    font-family: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+.headerDiv {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    gap: 10%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    overflow-x: hidden;
+}
+.headerDiv span{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 50px;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: animate 5s infinite linear;
+}
+
+@keyframes animate {
+    0%{
+        left: 0;
+        transform: translate(-100%);
+    }
+    100%{
+        left: 100%;
+        transform: translate(0%);
+    }
+}
+
+
+.headerDiv .options {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+.headerDiv .options li {
+    list-style: none;
+}
+
+.headerDiv .options li .navLink {
+    transition: 0.3s all linear;
+    text-decoration: none;
+    color: #fff;
+    font-size: large;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.headerDiv .options li .navLink:hover {
+    background: linear-gradient(to top, rgb(250, 91, 91), rgb(182, 2, 2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.headerDiv .options li .active {
+    background: linear-gradient(to top, rgb(250, 91, 91), rgb(174, 0, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .headerDiv {
+        padding: 10px;
+    }
+
+    .headerDiv .options {
+        padding: 0;
+    }
+
+    .headerDiv .options li .navLink {
+        font-size: large;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerDiv {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .headerDiv .options {
+        padding: 0;
+    }
+
+    .headerDiv .options li .navLink {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 426px) {
+
+    .headerDiv .options {
+        gap: 25px;
+        padding: 2%;
+    }
+
+    .headerDiv .options li .navLink {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 376px) {
+
+    .headerDiv .options {
+        gap: 25px;
+        padding: 2%;
+    }
+
+    .headerDiv .options li .navLink {
+        font-size: small;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .headerDiv .options {
+        gap: 18px;
+        padding: 2%;
+    }
+
+    .headerDiv .options li .navLink {
+        font-size: small;
+    }
+}

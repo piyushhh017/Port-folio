@@ -1,0 +1,309 @@
+ .workDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  
+  .workSec {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    background-color: #1d17163f;
+    border: 2px solid rgba(206, 206, 206, 0.152);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    opacity: 1;
+    padding: 3%;
+  }
+  
+  .workSec .worksTitle {
+    color: white;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .workSec .worksCard {
+    position: sticky;
+    top: 50vh;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 2rem;
+  }
+  
+  .workSec .worksCard .card {
+    position: sticky;
+    top: 20vh;
+    width: 80%;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 2%;
+  }
+  
+  .workSec .worksCard .card .prImg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 0.5%;
+    border: 5px solid black;
+  }
+  
+  .workSec .worksCard .card .prImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: rgba(11, 11, 11, 0.575);
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .workSec .worksCard .card .description {
+    width: 70%;
+    color: white;
+    padding: 4%;
+  }
+  
+  .workSec .worksCard .card .description h1 {
+    color: rgb(255, 202, 141);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .workSec .worksCard .card .description p {
+    font-size: small;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .workSec .worksCard .card .description .buttons {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+    margin-top: 3%;
+  }
+  
+  .workSec .worksCard .card .description .buttons .dndLinks {
+    text-decoration: none;
+  }
+  
+  .workSec .worksCard .card .description .buttons button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 2%;
+    width: 150px;
+    height: 35px;
+    border-radius: 25px;
+    border: 0;
+  }
+  
+  .workSec .worksCard .card .description .buttons button:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .workSec .worksCard .card:hover {
+    background-color: rgb(95, 3, 3);
+  }
+  
+  .workSec .worksCard .card:hover .prImg {
+    animation: rotate 8s infinite;
+  }
+  
+  .workSec span {
+    position: absolute;
+    border-radius: 100vmax;
+  }
+  
+  .workSec .top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 50%,
+      rgba(255, 255, 255, 0.5),
+      rgb(241, 7, 7)
+    );
+  }
+  
+  .workSec .bottom {
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgb(204, 3, 3),
+      rgba(255, 255, 255, 0.5),
+      transparent 50%
+    );
+  }
+  
+  .workSec .right {
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.5),
+      rgb(223, 4, 4)
+    );
+  }
+  
+  .workSec .left {
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 0;
+    background: linear-gradient(
+      180deg,
+      rgb(221, 12, 12),
+      rgba(255, 255, 255, 0.5),
+      transparent 70%
+    );
+  }
+  
+  .workSec .top {
+    animation: animateTop 3s ease-in-out infinite;
+  }
+  
+  .workSec .bottom {
+    animation: animateBottom 3s ease-in-out infinite;
+  }
+  
+  .workSec .right {
+    animation: animateRight 3s ease-in-out infinite;
+  }
+  
+  .workSec .left {
+    animation: animateLeft 3s ease-in-out infinite;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  @media (max-width: 769px) {
+    .workSec .worksCard .card {
+      width: 95%;
+    }
+    .workSec .worksCard .card .prImg{
+        width: 150px;
+        height: 150px;
+    }
+    .workSec .worksCard .card .description p{
+      font-size: x-small;
+    }
+    .workSec .worksCard .card .description .buttons button{
+        width: 100px;
+        height: 25px;
+        font-size: small;
+        margin-top: 5%;
+    }
+  }
+  
+  @media (max-width: 426px) {
+    .workDiv{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .workSec{
+        width: 80%;
+    }
+    .workSec .worksCard .card {
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 4%;
+    }
+    .workSec .worksCard .card .description p{
+      font-size: xx-small;
+    }
+    .workSec .worksCard .card .description .buttons{
+      gap: 1rem;
+    }
+    .workSec .worksCard .card .description .buttons button{
+        width: 80px;
+        height: 20px;
+        font-size: xx-small;
+        margin-top: 10%;
+    }
+  }
+  
+  @media (max-width: 376px) {
+    .workDiv{
+        width: 100%;
+        height: 100%;
+    }
+    .workSec{
+        margin-left: 7%;
+        width: 80%;
+    }
+    .workSec .worksCard .card {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    .workSec .worksCard .card .description h1{
+        font-size: medium;
+    }
+    .workSec .worksCard .card .description p{
+      font-size: xx-small;
+    }
+    .workSec .worksCard .card .description .buttons button{
+        width: 70px;
+        height: 20px;
+        font-size: xx-small;
+        margin-top: 11%;
+    }
+  }
+  
+  @media (max-width: 321px) {
+    .workSec .worksCard .card {
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 4%;
+    }
+    .workSec .worksCard .card .description p{
+      font-size: xx-small;
+    }
+    .workSec .worksCard .card .description .buttons button{
+        width: 60px;
+        height: 20px;
+        font-size: xx-small;
+        margin-top: 14%;
+    }
+  }
+  

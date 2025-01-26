@@ -1,0 +1,324 @@
+.servicesDiv{
+    margin-top: 5%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.servicesDiv .servicesList{
+    position: relative;
+    width: 80%;
+    height: 90%;
+    border-radius: 6px;
+    border: 2px solid rgba(206, 206, 206, 0.152);
+    opacity: 1;
+    background-color: #1d17163f;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+.servicesDiv .servicesList h1{
+    color: white;
+    font-size: xx-large;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.servicesDiv .servicesList .cards{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    gap: 15%;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+.servicesDiv .servicesList .cards .card{
+    width: 20%;
+    padding: 1%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.servicesDiv .servicesList .cards .card .icon{
+    margin-top: 2%;
+    font-size: xx-large;
+}
+.servicesDiv .servicesList .cards .card h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(255, 202, 141);
+}
+
+.servicesDiv .servicesList .cards .card p{
+    font-size: small;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.servicesDiv .servicesList .cards .card:hover{
+    background-color: rgb(95, 3, 3);
+    color: white;
+}
+.servicesDiv .servicesList .cards .card:hover .servicesDiv .servicesList .cards .card h3{
+    color: white;
+}
+
+.servicesDiv .servicesList span {
+    position: absolute;
+    border-radius: 100vmax;
+}
+.servicesDiv .servicesList .top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 50%,
+      rgba(255, 255, 255, 0.5),
+      rgb(230, 241, 7)
+    );
+}
+  
+.servicesDiv .servicesList .bottom {
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgb(204, 181, 3),
+      rgba(255, 255, 255, 0.5),
+      transparent 50%
+    );
+}
+  
+.servicesDiv .servicesList  .right {
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.5),
+      rgb(216, 223, 4)
+    );
+}
+  
+.servicesDiv .servicesList  .left {
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 0;
+    background: linear-gradient(
+      180deg,
+      rgb(218, 221, 12),
+      rgba(255, 255, 255, 0.5),
+      transparent 70%
+    );
+}
+
+.servicesDiv .servicesList .top {
+    animation: animateTop 3s ease-in-out infinite;
+  }
+  
+.servicesDiv .servicesList  .bottom {
+    animation: animateBottom 3s ease-in-out infinite;
+  }
+  
+.servicesDiv .servicesList .right {
+    animation: animateRight 3s ease-in-out infinite;
+  }
+  
+.servicesDiv .servicesList .left {
+    animation: animateLeft 3s ease-in-out infinite;
+  }
+  
+  @keyframes animateTop {
+    25% {
+      width: 100%;
+      opacity: 1;
+    }
+  
+    30%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes animateBottom {
+    0%,
+    50% {
+      opacity: 0;
+      width: 0;
+    }
+  
+    75% {
+      opacity: 1;
+      width: 100%;
+    }
+  
+    76%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes animateRight {
+    0%,
+    25% {
+      opacity: 0;
+      height: 0;
+    }
+  
+    50% {
+      opacity: 1;
+      height: 100%;
+    }
+  
+    55%,
+    100% {
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes animateLeft {
+    0%,
+    75% {
+      opacity: 0;
+      bottom: 0;
+      height: 0;
+    }
+  
+    100% {
+      opacity: 1;
+      height: 100%;
+    }
+  }
+
+/* MediaQueries*/
+
+@media (max-width: 769px) {
+
+    .servicesDiv{
+        height: 100%;
+        margin-top: 10%;
+        padding: 1%;
+    }
+    .servicesDiv .servicesList{
+        width: 90%;
+        height: 100%;
+        flex-direction: column;
+    }
+    .servicesDiv .servicesList h1{
+        font-size: xx-large;
+    }
+    .servicesDiv .servicesList .cards{
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 5%;
+    }
+    .servicesDiv .servicesList .cards .card {
+        width: 35%;
+    }
+}
+
+@media (max-width: 426px) {
+    .servicesDiv{
+        height: 100%;
+        width: 100%;
+        margin-top: 10%;
+    }
+    .servicesDiv .servicesList{
+        height: 100%;
+        flex-direction: column;
+    }
+    .servicesDiv .servicesList h1{
+        font-size: large;
+    }
+    .servicesDiv .servicesList .cards{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .servicesDiv .servicesList .cards .card{
+        padding: 3%;
+        width: 60%;
+    }
+    .servicesDiv .servicesList .cards .card  h3{
+        font-size: small;
+    }
+    .servicesDiv .servicesList .cards .card  p{
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 376px) {
+    .servicesDiv{
+        height: 100%;
+        margin-top: 10%;
+        padding: 3%;
+    }
+    .servicesDiv .servicesList{
+        padding: 0;
+        flex-direction: column;
+    }
+    .servicesDiv .servicesList .cards{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .servicesDiv .servicesList .cards .card{
+        width: 70%;
+        padding: 3%;
+    }
+    .servicesDiv .servicesList .cards .card  h3{
+        font-size: small;
+    }
+    .servicesDiv .servicesList .cards .card  p{
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 321px) {
+    .servicesDiv{
+        padding: 4%;
+        height: 100%;
+        margin-top: 10%;
+    }
+    .servicesDiv .servicesList{
+        padding: 0;
+        flex-direction: column;
+    }
+    .servicesDiv .servicesList .cards{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .servicesDiv .servicesList .cards .card{
+        width: 80%;
+        padding: 3%;
+    }
+    .servicesDiv .servicesList .cards .card  h3{
+        font-size: small;
+    }
+    .servicesDiv .servicesList .cards .card  p{
+        font-size: x-small;
+    }
+}
